@@ -8,6 +8,10 @@ import { filter, from } from 'rxjs';
   templateUrl: './category-modal.component.html',
 })
 export class CategoryModalComponent {
+  category: Category = {} as Category;
+
+  readonly categoryForm: FormGroup;
+  submitting = false;
   constructor(private readonly actionSheetService: ActionSheetService, private readonly modalCtrl: ModalController) {}
 
   cancel(): void {

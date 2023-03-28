@@ -13,4 +13,8 @@ export class AppComponent {
   ];
 
   constructor() {}
+
+  openModal() {
+
+  }
 }
