@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { addMonths, set } from 'date-fns';
 import { ModalController } from '@ionic/angular';
 import { ExpenseModalComponent } from '../expense-modal/expense-modal.component';
 import { Expense } from '../../shared/domain';
+import { save } from 'ionicons/icons';
 
 @Component({
   selector: 'app-expense-overview',
@@ -16,7 +17,8 @@ export class ExpenseListComponent {
   addMonths = (number: number): void => {
     this.date = addMonths(this.date, number);
   };
-  expenseGroups: any;
+  categories: any;
+  expenseForm: any;
 
   async openModal(expense?: Expense): Promise<void> {
     const modal = await this.modalCtrl.create({
@@ -26,5 +28,13 @@ export class ExpenseListComponent {
     modal.present();
     const { role } = await modal.onWillDismiss();
     console.log('role', role);
+  }
+
+  cancel() {
+
+  }
+
+  save() {
+
   }
 }
