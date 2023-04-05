@@ -10,8 +10,10 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { environment } from '../environments/environment';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+// @ts-ignore
 import { LoginComponent} from './shared/login/login.component';
 import { AuthInterceptor } from './shared/interceptor/auth.interceptor';
+// @ts-ignore
 import { ServiceWorkerModule } from '@angular/service-worker';
 
 registerLocaleData(locale);
