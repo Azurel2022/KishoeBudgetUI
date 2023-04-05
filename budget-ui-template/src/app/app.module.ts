@@ -11,7 +11,7 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { environment } from '../environments/environment';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { LoginComponent} from './shared/login/login.component';
-import { AuthInterceptor } from './shared/interceptor/interceptor';
+import { AuthInterceptor } from './shared/interceptor/auth.interceptor';
 import { ServiceWorkerModule } from '@angular/service-worker';
 
 registerLocaleData(locale);
