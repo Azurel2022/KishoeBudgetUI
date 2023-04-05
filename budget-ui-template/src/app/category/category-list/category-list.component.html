@@ -26,7 +26,7 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-  <ion-list [ngSwitch]='categyories?.length' inset='true'>
+  <ion-list [ngSwitch]='categories?.length' inset='true'>
     <!-- Skeleton -->
     <ng-container *ngSwitchCase='null'>
       <ion-item *ngFor='let i of [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]'>
@@ -59,5 +59,4 @@
     </ion-fab-button>
   </ion-fab>
 </ion-content>
-
 

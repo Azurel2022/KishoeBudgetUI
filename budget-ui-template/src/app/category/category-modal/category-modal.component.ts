@@ -44,7 +44,7 @@ export class CategoryModalComponent implements OnInit {
         this.modalCtrl.dismiss(null, 'refresh');
         this.submitting = false;
       },
-      error: (error: any) => {
+      error: (error) => {
         this.toastService.displayErrorToast('Could not save category', error);
         this.submitting = false;
       },
