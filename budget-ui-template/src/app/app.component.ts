@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { categoriesPath, expensesPath } from './shared/routes';
+import { AuthService } from './shared/service/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -12,9 +13,5 @@ export class AppComponent {
     { title: 'Categories', url: `/${categoriesPath}`, icon: 'pricetag' },
   ];
 
-  constructor() {}
-
-  openModal() {
-
-  }
+  constructor(readonly authService: AuthService) {}
 }

@@ -22,3 +22,4 @@ describe('CategoryListComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
