@@ -10,11 +10,8 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { environment } from '../environments/environment';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
-// @ts-ignore
 import { LoginComponent} from './shared/login/login.component';
 import { AuthInterceptor } from './shared/interceptor/auth.interceptor';
-// @ts-ignore
-import { ServiceWorkerModule } from '@angular/service-worker';
 
 registerLocaleData(locale);
 
@@ -27,12 +24,6 @@ registerLocaleData(locale);
     BrowserModule,
     HttpClientModule,
     IonicModule.forRoot(),
-    ServiceWorkerModule.register('ngsw-worker.js', {
-      enabled: !isDevMode(),
-      // Register the ServiceWorker as soon as the application is stable
-      // or after 30 seconds (whichever comes first).
-      registrationStrategy: 'registerWhenStable:30000'
-    }),
   ],
   providers: [
     { provide: DEFAULT_CURRENCY_CODE, useValue: 'CHF' },
