@@ -96,7 +96,7 @@ export class ExpenseModalComponent implements OnInit {
           this.submitting = false;
         },
         error: (error) => {
-          this.toastService.displayErrorToast('Could not delete expense', error),
+          this.toastService.displayErrorToast('Could not delete expense', error);
             this.submitting = false;
         },
       })
